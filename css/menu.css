@@ -1,0 +1,44 @@
+
+#menu {
+    width: 100%;
+    height: 60px;
+    background-color: #eeeeee;
+
+    display: flex;
+
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+#menu div {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#menu div img{
+    width: 30px;
+    height: 30px;
+
+}
+#menu div div {
+    font-family: 黑体;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.message {
+    position: relative;
+}
+.dott3 {
+    width: 20px;
+    height: 20px;
+    background-color: #ff3e3e;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    color: whitesmoke;
+    font-size: 12px;
+}

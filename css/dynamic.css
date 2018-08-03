@@ -1,0 +1,153 @@
+
+#dynamic {
+    width: 100%;
+    flex: 1;
+    background-color: #eeeeee;
+
+    overflow-y: scroll;
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.chat-list {
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+}
+.chat-item {
+    width: 96%;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    display: flex;
+    justify-content: flex-start;
+}
+.chat-item > div {
+    margin-right: 2%;
+}
+.chat-item-left {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+.dott1 {
+    width: 10px;
+    height: 10px;
+    background-color: #ff3e3e;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    right: -4px;
+}
+.dott2 {
+    width: 16px;
+    height: 16px;
+    background-color: #ff3e3e;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    color: whitesmoke;
+    font-size: 12px;
+}
+
+.chat-item-left img {
+    width: 56px;
+    height: 56px;
+}
+.chat-item-right {
+    flex: 1;
+}
+.chat-item-top {
+    height: 55%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    /*word-break: break-all;*/
+    /*text-overflow: ellipsis;*/
+    /*overflow: hidden;*/
+
+
+    font-family: 微软雅黑;
+    font-size: 16px;
+    color: #353535;
+    font-weight: 500;
+}
+.time {
+    width: 60px;
+    margin-right: 0;
+    text-align: right;
+
+    font-family: 微软雅黑;
+    font-size: 12px;
+    color: #999999;
+    font-weight: 300;
+}
+.chat-item-bottom {
+    height: 45%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-message {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    font-family: 微软雅黑;
+    font-size: 14px;
+    color: #999999;
+    font-weight: 300;
+
+
+    /*word-break: break-all;*/
+    /*text-overflow: ellipsis;*/
+    /*overflow: hidden;*/
+
+}
+.content-audio {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    font-family: 微软雅黑;
+    font-size: 14px;
+    color: crimson;
+    font-weight: 500;
+
+
+    /*word-break: break-all;*/
+    /*text-overflow: ellipsis;*/
+    /*overflow: hidden;*/
+}
+.silence {
+    width: 15px;
+    height: 15px;
+
+    background: url("../img/silence.svg") center;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: start;
+
+    margin-left: 45px;
+}

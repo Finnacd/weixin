@@ -1,0 +1,127 @@
+
+#signal{
+    width: 100%;
+    height: 32px;
+    background-color: #303030;
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 100;
+    font-size: 12px;
+}
+#signal_left{
+    flex: 1;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+#signal-left div{
+    margin-left: 4px;
+}
+#signal_center{
+    width: 50px;
+    height: 32px;
+    font-size: 16px;
+}
+#signal_right{
+    flex: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+#signal_right div{
+    /*margin-right: 4px;*/
+}
+/*signal:开始*/
+#signal-area{
+    height: 16px;
+    width: 35px;
+
+    display: flex;
+    align-items: flex-end;
+}
+#signal-area div{
+    width: 4px;
+    /*background-color: white;*/
+    margin-left: 3px;
+    border-radius: 1px;
+}
+#signal-area div:nth-child(1){
+    height: 4px;
+}
+#signal-area div:nth-child(2){
+    height: 8px;
+}
+#signal-area div:nth-child(3){
+    height: 12px;
+}
+#signal-area div:nth-child(4){
+    height: 16px;
+}
+.signal-ok{
+    background-color: white;
+}
+.signal-lose{
+    background-color: gray;
+}
+/*signal结束*/
+
+/*电池开始*/
+#battery {
+    width: 40px;
+    height: 18px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#battery-body {
+    height: 12px;
+    width: 32px;
+    border: 1px solid gray;
+    border-radius: 1px;
+}
+#battery-header {
+    width: 2px;
+    height: 6px;
+    background-color: white;
+    border-radius: 0 1px 1px 0;
+}
+#battery-core{
+    height: 10px;
+    width: 30px;
+    margin: 1px;
+    background-color: #1efc79;
+}
+/*电池结束*/
+@keyframes charge {
+    0%{
+        width: 1px;
+        background-color: crimson;
+    }
+    20%{
+        width: 6px;
+        background-color: yellow;
+    }
+    80%{
+        width: 24px;
+        background-color: #1efc79;
+    }
+    100%{
+        width: 30px;
+        background-color: #1efc79;
+    }
+}
+.charging{
+    animation: charge 180s linear infinite;
+}
