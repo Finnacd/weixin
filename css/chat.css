@@ -55,6 +55,10 @@
 }
 /*头部结束*/
 
+
+::-webkit-scrollbar  {
+    display: none;
+}
 /*聊天区开始*/
 #chat-list {
     flex: 1;
@@ -63,6 +67,11 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    overflow-y: scroll;
+}
+#chat-list > div {
+    margin: 20px 0;
 }
 .time {
     width: 80px;
@@ -70,20 +79,87 @@
     background: #d3d3d3;
     border-radius: 3px;
 
-    margin: 10px 0;
+    padding: 10px 3px;
+    font-size: 12px;
+    color: #ffffff;
 }
-.chat-item {
-    width: 100%;
 
+.chat-item-left {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+
+}
+.chat-item-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+.chat-item-left > div:nth-of-type(1) {
+    margin: -14px 5%;
+}
+.chat-item-right > div:nth-last-of-type(1) {
+    margin: -14px 5%;
+}
+.chat-item-left > div:nth-last-of-type(1) {
+    margin-right: 5%;
+}
+.chat-item-right > div:nth-of-type(1) {
+    margin-left: 5%;
 }
 .chat-pic {
+    /*width: 30px;*/
+    /*height: 30px;*/
+}
+.chat-pic img {
     width: 30px;
     height: 30px;
 }
+.chat-content-left {
+    flex: 1;
 
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+.chat-content-right {
+    flex: 1;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.triangle-left {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-right-color: #ffffff;
+    position: absolute;
+    top: -6px;
+    left: -12px;
+}
+.triangle-right {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-left-color: #ffffff;
+    position: absolute;
+    top: -6px;
+    right: -12px;
+}
+.chat-message {
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 7px;
+
+    font-size: 14px;
+}
 
 /*聊天区结束*/
 /*底部开始*/
