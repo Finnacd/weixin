@@ -1,0 +1,14 @@
+
+.scrollbar {
+    width: 12px;
+    height: 96%;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+
+    color: #4e4e4e;
+}

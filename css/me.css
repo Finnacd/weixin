@@ -1,0 +1,56 @@
+
+
+
+#me-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#me-item {
+    width: 100%;
+}
+.me-intro {
+    margin: 10px 3%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.me-pic {
+    width: 40px;
+    height: 40px;
+}
+.me-pic >img {
+    width: 100%;
+    height: 100%;
+}
+.me-info {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+
+    margin-left: 10px;
+}
+.me-name {
+
+}
+.me-id {
+    color: #a9a9a9;
+    font-size: 14px;
+}
+.me-qrcode {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+.me-qrcode > img {
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    margin-right: 0;
+}
