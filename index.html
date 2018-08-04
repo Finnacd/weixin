@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./css/signal.css">
+    <link rel="stylesheet" href="./css/title.css">
+    <link rel="stylesheet" href="./css/menu.css">
+
+
+
+</head>
+<body>
+    <div id="container">
+        <!--信号层开始-->
+        <div id="signal">
+            <div id="signal_left">
+                <div id="signal-area">
+                    <div class="signal-ok"></div>
+                    <div class="signal-ok"></div>
+                    <div class="signal-ok"></div>
+                    <div class="signal-lose"></div>
+                </div>
+                <div id="operation">中国移动</div>
+                <div id="xg">4G</div>
+            </div>
+            <div id="signal_center" class="xy-center">15:11</div>
+            <div id="signal_right">
+                <div id="battery">
+
+                    <div id="battery-body">
+                        <div id="battery-core" class="charging"></div>
+                    </div>
+                    <div id="battery-header"></div>
+
+                </div>
+            </div>
+        </div>
+        <!--信号层结束-->
+
+        <!--标题开始-->
+        <div id="title">
+            <div id="weixin">微信(12)</div>
+            <div id="function">
+                <div id="search">
+                    <div class="icon-search"></div>
+                </div>
+                <div id="more">
+                    <div class="pop">
+                        <div class="pop-item">
+                            <img src="./img/扫一扫.svg" alt="">
+                            <div>发起群聊</div>
+                        </div>
+                        <div class="pop-item">
+                            <img src="./img/扫一扫.svg" alt="">
+                            <div>添加朋友</div>
+                        </div>
+                        <div class="pop-item">
+                            <img src="./img/扫一扫.svg" alt="">
+                            <div>扫一扫</div>
+                        </div>
+                        <div class="pop-item">
+                            <img src="./img/扫一扫.svg" alt="">
+                            <div>收付款</div>
+                        </div>
+                        <div class="pop-item">
+                            <img src="./img/扫一扫.svg" alt="">
+                            <div>帮助与反馈</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--标题结束-->
+
+        <!--动态层开始-->
+        <div id="dynamic">
+
+
+        </div>
+        <!--动态层结束-->
+
+        <!--底部菜单开始-->
+        <div id="menu">
+            <div class="menu-item" id="message" data-page="./page/message.html">
+                <div class="div">
+                    <img src="./img/message_weixin_01.svg" alt="">
+                    <div class="dott3 xy-center">12</div>
+                </div>
+                <div class="menu-name">微信</div>
+            </div>
+            <div class="menu-item" id="connector" data-page="./page/contact.html">
+                <div class="div">
+                    <img src="./img/connector_01.svg" alt="">
+                </div>
+                <div class="menu-name">通讯录</div>
+            </div>
+            <div class="menu-item" id="find" data-page="./page/find.html">
+                <div class="div">
+                    <img src="./img/find_weixin_02.svg" alt="">
+                </div>
+                <div class="menu-name">发现</div>
+            </div>
+            <div class="menu-item" id="me" data-page="./page/me.html">
+                <div class="div">
+                    <img src="./img/me_weixin_02.svg" alt="">
+                </div>
+                <div class="menu-name">我</div>
+            </div>
+        </div>
+
+        <!--底部 菜单结束-->
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/router.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

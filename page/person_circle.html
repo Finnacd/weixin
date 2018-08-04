@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <title>Title</title>
+    <title></title>
 
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/container.css">
@@ -46,8 +46,8 @@
 
             <!--图片层开始        -->
             <div id="picture" class="">
-                <div class="mask">
-                    <div class="left-arrow"></div>
+                <div class="mask" id="mask">
+                    <div class="left-arrow" onclick="javascript:window.history.back()"></div>
                     <div class="camera"></div>
                 </div>
                 <div class="absolute">
@@ -179,6 +179,14 @@
             <!--朋友圈内容结束-->
         </div>
     </div>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
 
+
+            })
+        })
+    </script>
 </body>
 </html>

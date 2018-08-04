@@ -1,25 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
 
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/find.css">
-</head>
-<body>
+
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/find.css">
+
     <div id="find-container">
         <div id="find-list">
             <div class="blank">
                 <div></div>
             </div>
-            <div class="item-container">
+            <div class="item-container" id="person_circle">
                 <div class="item">
                     <div class="item-pic">
-                        <img src="../img/朋友圈.svg" alt="">
+                        <img src="./img/朋友圈.svg" alt="" style="width: 22px; height: 22px;">
                     </div>
                     <div class="item-name ">朋友圈</div>
                 </div>
@@ -31,13 +23,13 @@
             <div class="item-container">
                 <div class="item">
                     <div class="item-pic">
-                        <img src="../img/扫一扫.svg" alt="">
+                        <img src="./img/扫一扫.svg" alt="" style="width: 24px; height: 24px;">
                     </div>
                     <div class="item-name ">扫一扫</div>
                 </div>
                 <div class="item">
                     <div class="item-pic">
-                        <img src="../img/摇一摇.svg" alt="">
+                        <img src="./img/摇一摇.svg" alt="" style="width: 22px; height: 22px;">
                     </div>
                     <div class="item-name ">摇一摇</div>
                 </div>
@@ -49,13 +41,13 @@
             <div class="item-container">
                 <div class="item">
                     <div class="item-pic">
-                        <img src="../img/看一看.svg" alt="">
+                        <img src="./img/看一看.svg" alt="">
                     </div>
                     <div class="item-name ">看一看</div>
                 </div>
                 <div class="item">
                     <div class="item-pic">
-                        <img src="../img/搜一搜.svg" alt="">
+                        <img src="./img/搜一搜.svg" alt="" style="width: 24px; height: 24px;">
                     </div>
                     <div class="item-name ">搜一搜</div>
                 </div>
@@ -68,7 +60,7 @@
             <div class="item-container">
                 <div class="item">
                     <div class="item-pic">
-                        <img src="../img/附近的人.svg" alt="">
+                        <img src="./img/附近的人.svg" alt="" style="width: 22px; height: 22px;">
                     </div>
                     <div class="item-name ">附近的人</div>
                 </div>
@@ -80,13 +72,13 @@
             <div class="item-container">
                 <div class="item">
                     <div class="item-pic">
-                        <img src="../img/购物.svg" alt="">
+                        <img src="./img/购物.svg" alt="" style="width: 24px; height: 24px;">
                     </div>
                     <div class="item-name ">购物</div>
                 </div>
                 <div class="item">
                     <div class="item-pic">
-                        <img src="../img/游戏.svg" alt="">
+                        <img src="./img/游戏.svg" alt="">
                     </div>
                     <div class="item-name ">游戏</div>
                 </div>
@@ -97,5 +89,10 @@
 
         </div>
     </div>
-</body>
-</html>
+<script src="./js/jquery.js"></script>
+<script>
+    $("#person_circle").click(function () {
+        window.location.href = "./page/person_circle.html";
+    })
+
+</script>

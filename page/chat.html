@@ -5,13 +5,47 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/signal.css">
     <link rel="stylesheet" href="../css/chat.css" type="text/css">
 </head>
 <body>
+
+
+
+
+
+
+
     <div id="chat-container">
+        <!--信号层开始-->
+        <div id="signal">
+            <div id="signal_left">
+                <div id="signal-area">
+                    <div class="signal-ok"></div>
+                    <div class="signal-ok"></div>
+                    <div class="signal-ok"></div>
+                    <div class="signal-lose"></div>
+                </div>
+                <div id="operation">中国移动</div>
+                <div id="xg">4G</div>
+            </div>
+            <div id="signal_center" class="xy-center">15:11</div>
+            <div id="signal_right">
+                <div id="battery">
+
+                    <div id="battery-body">
+                        <div id="battery-core" class="charging"></div>
+                    </div>
+                    <div id="battery-header"></div>
+
+                </div>
+            </div>
+        </div>
+        <!--信号层结束-->
+
         <!--头部开始-->
         <div id="chat-header">
-            <div id="chat-header-left">
+            <div id="chat-header-left" onclick="javascript:window.history.back();">
                 <img src="../img/left_narrow.svg" alt="">
                 <span>刘亦菲</span>
             </div>
