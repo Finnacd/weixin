@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/signal.css">
     <link rel="stylesheet" href="../css/chat.css" type="text/css">
+
+    <style>
+        #chat-bottom {
+            display: flex;
+            align-items: center;
+        }
+        #input {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #text {
+            width: 100%;
+        }
+        #input-text {
+            width: 100%;
+            text-indent: 10px;
+        }
+        #send {
+            padding: 2px;
+            margin: 8px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,7 +74,7 @@
         <div id="chat-header">
             <div id="chat-header-left" onclick="javascript:window.history.back();">
                 <img src="../img/left_narrow.svg" alt="">
-                <span>刘亦菲</span>
+                <span>小Q</span>
             </div>
             <div id="chat-header-right">
                 <div class="dott4"></div>
@@ -59,76 +86,38 @@
 
         <!--聊天区 开始-->
         <div id="chat-list">
-            <div class="time xy-center">周二 23:25</div>
-
-
-
+            <div class="time xy-center" id="time"></div>
 
         </div>
         <!--聊天区结束-->
+        <script src="../js/jquery.js" type="text/javascript"></script>
+        <script src="../js/tuling.js"></script>
         <!--底部开始-->
         <div id="chat-bottom">
             <div id="input">
-                <div id="audio"></div>
                 <div id="text" >
                     <input type="text" placeholder="请输入聊天内容" id="input-text" style="background-color: #f3f3f3;border: none;">
                 </div>
-                <div id="smile"></div>
             </div>
-            <div id="more" value="发送">发送</div>
+            <div id="send" onclick='send($("#input-text").val()  )'>发送</div>
         </div>
         <!--底部结束-->
     </div>
-    <script src="../js/jquery.js" type="text/javascript"></script>
-    <script>
-        var key = "36166fac1f3647838377c4100ee59756";
-        var url = "http://www.tuling123.com/openapi/api";
-        $("#more").click(function (){
-
-            var info = {
-                "key":key,
-                "info":$("#input-text").val()
-
-            }
-
-            var self = $('<div class="chat-item-right">\n' +
-                '                <div class="chat-content-right">\n' +
-                '                    <!--<div class="triangle-right"></div>-->\n' +
-                '                    <div class="chat-message-right">+$("#input-text").val()+</div>\n' +
-                '                </div>\n' +
-                '                <div class="chat-pic">\n' +
-                '                    <img src="../img/person/mylogo.jpg" alt="">\n' +
-                '                </div>\n' +
-                '            </div>');
-
-            $(".chat-list").append(self);
-            
-            $.ajax({
-                type:"post",
-                url:url,
-                data:info,
-                dataType:"json",
-                // jsonp:'jsonpCallback',
-                // jsonpCallback:'tuli',
-                success:function (result) {
-                    var robot = $('<div class="chat-item-left">\n' +
-                        '                <div class="chat-pic">\n' +
-                        '                    <img src="../img/person/liu2.jpg" alt="">\n' +
-                        '                </div>\n' +
-                        '                <div class="chat-content-left">\n' +
-                        '                    <!--<div class="triangle-left"></div>-->\n' +
-                        '                    <div class="chat-message-left">+result.text+</div>\n' +
-                        '                </div>\n' +
-                        '            </div>');
-                    $(".chat-list").append(robot);
-                }
-            });
-
-            function tuli(json) {
-                alert(json.msg);
-            }
-            
-        })
+    <script type="text/javascript">
+        window.onload=function(){
+            setInterval(function(){
+                    var date=new Date();
+                    var year=date.getFullYear(); //获取当前年份
+                    var mon=date.getMonth()+1; //获取当前月份
+                    var da=date.getDate(); //获取当前日
+                    var day=date.getDay(); //获取当前星期几
+                    var h=date.getHours(); //获取小时
+                    var m=date.getMinutes(); //获取分钟
+                    var s=date.getSeconds(); //获取秒
+                    var d=document.getElementById('time');
+                    d.innerHTML= mon+'月'+da+'日 '+'星期'+day+' '+h+':'+m+':'+s;
+                },1000)
+        }
     </script>
 </body>
 </html>
