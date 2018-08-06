@@ -88,13 +88,14 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 
 }
 .chat-item-right {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-
+    align-items: center;
 
 }
 .chat-item-left > div:nth-of-type(1) {
